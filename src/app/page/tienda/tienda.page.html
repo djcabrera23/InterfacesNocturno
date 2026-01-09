@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio"></ion-back-button>
+    </ion-buttons>
+    <div class="hero-container">
+    <div class="hero-overlay">
+      <div class="hero-content">
+      <h1>URBAN<span class="highlight">SHOES</span></h1>
+      </div>
+      </div>
+      </div>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="cart-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <ion-searchbar 
+      [(ngModel)]="searchTerm" 
+      placeholder="Buscar productos" 
+      (ionChange)="onSearchChange($event)"
+      debounce="500">
+    </ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <!-- Iteramos sobre la lista de productos -->
+      <ion-col size="6" size-md="4" size-lg="3" *ngFor="let producto of productos">
+        
+        <ion-card class="product-card" button >
+          <img [src]="producto.imageUrl" alt="{{producto.name}}" />
+
+          <ion-card-header>
+            <ion-card-title>{{ producto.name }}</ion-card-title>
+            <ion-card-subtitle>{{ producto.brand }}</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            <div class="price">
+              ${{ producto.price.toFixed(2) }}
+            </div>
+            <ion-button expand="block" fill="outline" size="small">
+              Añadir
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

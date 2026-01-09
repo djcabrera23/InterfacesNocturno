@@ -1,0 +1,42 @@
+<ion-content [fullscreen]="true">
+  <!-- Hero Section -->
+  <div class="hero-container">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>URBAN<span class="highlight">SHOES</span></h1>
+        <p>Camina con estilo, vive sin límites.</p>
+        <ion-button (click)="irALaTienda()" shape="round" color="light">
+          Ver Colección 2026
+        </ion-button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Categorías Rápidas -->
+  <div class="section-title">
+    <h2>Categorías</h2>
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" *ngFor="let cat of categories">
+        <ion-card class="category-card" mode="ios">
+          <ion-icon [name]="cat.icon"></ion-icon>
+          <p>{{ cat.name }}</p>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Banner Promocional -->
+  <ion-card class="promo-banner">
+    <ion-item lines="none" color="dark">
+      <ion-label>
+        <h2>Envío Gratis</h2>
+        <p>En pedidos superiores a $99</p>
+      </ion-label>
+      <ion-icon name="airplane-outline" slot="end"></ion-icon>
+    </ion-item>
+  </ion-card>
+
+</ion-content>

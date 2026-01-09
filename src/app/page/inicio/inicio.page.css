@@ -1,0 +1,84 @@
+/* Hero Section */
+.hero-container {
+  height: 60vh;
+  background: url('https://thumbs.dreamstime.com/b/fila-de-zapatos-casuales-mostrados-en-estantes-una-tienda-minorista-corales-las-estanter%C3%ADas-impecables-dentro-con-el-foco-calzado-394351800.jpg?w=992') no-repeat center center / cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content h1 {
+  color: white;
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 5px;
+  letter-spacing: -1px;
+}
+
+.hero-content .highlight {
+  color: #f4cf15; /* Un tono amarillo/dorado moderno */
+}
+
+.hero-content p {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* Categorías */
+.section-title {
+  padding: 20px 16px 5px;
+}
+
+.section-title h2 {
+  font-weight: 700;
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 8px;
+  background: #f8f9fa;
+  border-radius: 15px;
+  box-shadow: none;
+  border: 1px solid #eee;
+}
+
+.category-card ion-icon {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.category-card p {
+  margin: 0;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Banner */
+.promo-banner {
+  margin: 20px 16px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.promo-banner h2 {
+  font-weight: 700;
+}
